@@ -4,6 +4,8 @@ const botaoApaga = document.querySelector('#apaga-tudo');
 const botaoApagaCompletas = document.querySelector('#remover-finalizados');
 const botaoApagaSelecionada = document.querySelector('#remover-selecionado');
 const botaoSalva = document.querySelector('#salvar-tarefas');
+const botaoMoveUp = document.querySelector('#mover-cima');
+const botaoMoveDown = document.querySelector('#mover-baixo');
 const ol = document.querySelector('#lista-tarefas');
 
 function removeSelected() {
@@ -76,3 +78,16 @@ window.onload = () => {
     }
   }
 };
+botaoMoveUp.addEventListener('click', () => {
+  const selected = document.querySelector('.selected');
+  if (selected && selected.previousElementSibling) {
+    selected.parentNode.insertBefore(selected, selected.previousElementSibling);
+  }
+});
+
+botaoMoveDown.addEventListener('click', () => {
+  const selected = document.querySelector('.selected');
+  if (selected && selected.nextElementSibling) {
+    selected.parentNode.insertBefore(selected.nextElementSibling, selected);
+  }
+});
