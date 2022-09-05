@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +12,15 @@
     <h1>Minha Lista de Tarefas</h1>
     <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
 </header>
+<form>
 <input id="texto-tarefa" type="text" name="tarefa" placeholder="Nome do Item">
-<ol id="lista-tarefas"></ol>
+<button type="reset" id="criar-tarefa">Criar a tarefa!</button>
+<button id="remover-selecionado" type="button">Apagar a tarefa selecionada</button>
+<button id="remover-finalizados" type="button">Apagar as tarefas completadas!</button>
+<button id="apaga-tudo" type="button">Apagar todas as tarefas</button>
+<ol id="lista-tarefas">
+</ol>
+</form>
 <script src="script.js"></script>
 </body>
 </html>
